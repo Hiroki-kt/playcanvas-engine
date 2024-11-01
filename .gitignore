@@ -14,3 +14,4 @@ stats.html
 .npmrc
 examples/.npmrc
 .prettierrc
+*.ply

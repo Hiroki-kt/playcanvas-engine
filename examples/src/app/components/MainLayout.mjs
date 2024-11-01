@@ -2,10 +2,9 @@ import { Component } from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Container } from '@playcanvas/pcui/react';
 
-import { CodeEditorDesktop } from './code-editor/CodeEditorDesktop.mjs';
 import { Example } from './Example.mjs';
 import { Menu } from './Menu.mjs';
-import { SideBar } from './Sidebar.mjs';
+import { SideBar } from './SideBar.mjs';
 
 import { iframe } from '../iframe.mjs';
 import { jsx } from '../jsx.mjs';
@@ -70,21 +69,26 @@ class MainLayout extends TypedComponent {
                 jsx(
                     Switch,
                     null,
-                    jsx(Route, { exact: true, path: '/' }, jsx(Redirect, { to: '/misc/hello-world' })),
+                    jsx(
+                        Route,
+                        { exact: true, path: '/' },
+                        jsx(Redirect, { to: '/misc/hello-world' })
+                    ),
                     jsx(
                         Route,
                         { path: '/:category/:example' },
-                        jsx(SideBar, null),
+                        // jsx(SideBar, null),
                         jsx(
                             Container,
                             { id: 'main-view-wrapper' },
                             jsx(Menu, {
-                                setShowMiniStats: this.updateShowMiniStats.bind(this)
+                                setShowMiniStats:
+                                    this.updateShowMiniStats.bind(this)
                             }),
                             jsx(
                                 Container,
                                 { id: 'main-view' },
-                                orientation === 'landscape' && jsx(CodeEditorDesktop),
+                                // orientation === 'landscape' &&,
                                 jsx(Example, null)
                             )
                         )
