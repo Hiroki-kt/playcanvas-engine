@@ -4,7 +4,6 @@ import { Container } from '@playcanvas/pcui/react';
 
 import { Example } from './Example.mjs';
 import { Menu } from './Menu.mjs';
-import { SideBar } from './SideBar.mjs';
 
 import { iframe } from '../iframe.mjs';
 import { jsx } from '../jsx.mjs';
@@ -59,7 +58,6 @@ class MainLayout extends TypedComponent {
     };
 
     render() {
-        const { orientation } = this.state;
         return jsx(
             'div',
             { id: 'appInner' },
