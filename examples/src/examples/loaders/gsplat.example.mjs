@@ -98,7 +98,7 @@ assetListLoader.load(() => {
     camera.addComponent('camera', {
         clearColor: new pc.Color(0.2, 0.2, 0.2)
     });
-    camera.setLocalPosition(0, 7, 0);
+    camera.setLocalPosition(2, 2, 0);
 
     const createSplatInstance = (
         name,
@@ -159,8 +159,8 @@ assetListLoader.load(() => {
         0.9
     );
 
-    // target2.enabled = false;
-    // target3.enabled = false;
+    target2.enabled = false;
+    target3.enabled = false;
 
     const createButtonInstance = (labelText, dx, dy, dz) => {
         // Button

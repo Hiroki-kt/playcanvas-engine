@@ -72,7 +72,7 @@ class MainLayout extends TypedComponent {
                     jsx(
                         Route,
                         { exact: true, path: '/' },
-                        jsx(Redirect, { to: '/misc/hello-world' })
+                        jsx(Redirect, { to: '/loaders/gsplat' })
                     ),
                     jsx(
                         Route,
